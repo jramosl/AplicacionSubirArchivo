@@ -1,0 +1,27 @@
+/* 
+    Document   : stls
+    Created on : Mar 31, 2017, 12:04:32 PM
+    Author     : JesusArmando
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body{
+    padding-top: 10px;
+    margin: 0 auto;
+}
+#tab,#tab2{
+    border: aliceblue;
+    border-style: dashed;
+    margin: 0 auto;
+}
+*{
+    box-sizing: border-box;
+}
+.panel-success, .panel-warning{
+    width: 50%;
+    margin: 0 auto;
+}
+#aux1,#aux2{
+    text-align: center;
+}
+
