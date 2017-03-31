@@ -17,5 +17,6 @@
 			</td>
 		</tr>
 	</table>
+	<a href="inicio.html">Inicio</a>
 </body>
 </html>
