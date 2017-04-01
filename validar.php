@@ -12,17 +12,15 @@
     <body>
         <?php
         echo "PHP está funcionado1!!!";
-        require_once "conexionBD.php";
-        echo "PHP está funcionado2!!!";
+        $link = mysqli_connect('us-cdbr-iron-east-03.cleardb.net', 'bb87881e7a2166', 'dc7e8234') or die('No se pudo conectar: ' . mysqli_error());
+        $conexion = mysqli_select_db($link, 'ad_643556e1444d091') or die('No se pudo seleccionar la base de datos');
         $nombre = "";
-        $obj = new conexionBD();
         echo "PHP está funcionado3!!!";
-        $enlace = $obj->crearConexion();
         echo "PHP está funcionado4!!!";
         $user = $_POST['usuario'];
         $pass = $_POST['pass'];
         echo "PHP está funcionado5!!!";
-        $result = mysqli_query($enlace, 'SELECT username,pass FROM usuario where username=' . '"' . $user . '" && pass=' . '"' . $pass . '"');
+        $result = mysqli_query($link, 'SELECT username,pass FROM usuario where username=' . '"' . $user . '" && pass=' . '"' . $pass . '"');
         echo "PHP está funcionado6!!!";
         $rows = mysqli_num_rows($result);
         echo "PHP está funcionado7!!!";
