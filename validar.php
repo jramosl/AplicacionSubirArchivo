@@ -34,6 +34,7 @@
             </div>
         <?PHP
     }
+        echo "FUNCIONANDO";
     ?>
         </body>
 </html>
