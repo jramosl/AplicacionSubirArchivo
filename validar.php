@@ -12,8 +12,8 @@
     <body>
         <?php
         echo "PHP está funcionado1!!!";
-        $link = mysqli_connect('us-cdbr-iron-east-03.cleardb.net', 'bb87881e7a2166', 'dc7e8234') or die('No se pudo conectar: ' . mysqli_error());
-        $conexion = mysqli_select_db($link, 'ad_643556e1444d091') or die('No se pudo seleccionar la base de datos');
+        $link = mysql_connect('us-cdbr-iron-east-03.cleardb.net', 'bb87881e7a2166', 'dc7e8234') or die('No se pudo conectar: ' . mysqli_error());
+        $conexion = mysql_select_db($link, 'ad_643556e1444d091') or die('No se pudo seleccionar la base de datos');
         $nombre = "";
         echo "PHP está funcionado3!!!";
         echo "PHP está funcionado4!!!";
