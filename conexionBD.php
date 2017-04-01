@@ -1,6 +1,6 @@
 <?php
 class conexionBD {
-
+            $link="";
     public function crearConexion() {
         if ($link == null) {
             $link = mysqli_connect('us-cdbr-iron-east-03.cleardb.net', 'bb87881e7a2166', 'dc7e8234') or die('No se pudo conectar: ' . mysqli_error());
