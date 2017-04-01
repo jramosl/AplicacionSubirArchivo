@@ -31,9 +31,9 @@
             <div class="alert alert-danger">
                 <strong>No se pudo iniciar sesión. </strong> Credenciales inválidas. <a href="inicio.html" class="alert-link">Iniciar sesión</a>.
             </div>
-        </body>
         <?PHP
     }
-    echo "</html>";
     ?>
+        </body>
+</html>
 
