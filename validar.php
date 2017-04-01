@@ -18,28 +18,28 @@
         $port = "5432";
         $host = "echo.db.elephantsql.com";
         $cadenaConexion = "host=$host port=$port dbname=$dbname user=$user password=$password";
-        $conexion = pg_connect($cadenaConexion) or die("Error en la Conexión: ".pg_last_error());
+        //$conexion = pg_connect($cadenaConexion) or die("Error en la Conexión: ".pg_last_error());
         echo "<h3>Conexion Exitosa PHP - PostgreSQL</h3><hr><br>";
         $query = "select username from usuario";
-        $resultado = pg_query($conexion, $query) or die("Error en la Consulta SQL");
-        $numReg = pg_num_rows($resultado);
-        if($numReg>0){
+        //$resultado = pg_query($conexion, $query) or die("Error en la Consulta SQL");
+        //$numReg = pg_num_rows($resultado);
+        /*if($numReg>0){
         while ($fila=pg_fetch_array($resultado)) {
         echo "<p>".$fila['username']."</p>";
         }
         }else{
                 echo "No hay Registros";
-        }
+        }*/
      
         $nombre = "";
         echo "PHP está funcionado3!!!";
         echo "PHP está funcionado4!!!";
         $user = $_POST['usuario'];
         $pass = $_POST['pass'];
-        echo "PHP está funcionado5!!!";
-        echo "PHP está funcionado6!!!";
+        echo "$user";
+        echo "$pass";
         echo "PHP está funcionado7!!!";
-        if ($numReg == 1) {
+        /*if ($numReg == 1) {
             while ($res = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 $nombre = $res['username'];
             }
@@ -53,7 +53,7 @@
             </div>
         <?PHP
     }
-        echo "FUNCIONANDO";
+        echo "FUNCIONANDO";*/
     ?>
         </body>
 </html>
