@@ -1,6 +1,3 @@
-<?php
-ini_set("extension","php_mysqli.dll");
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,20 +12,34 @@ ini_set("extension","php_mysqli.dll");
     <body>
         <?php
         echo 'PHP está funcionado1!!!';
-        $link = mysqli_connect("us-cdbr-iron-east-03.cleardb.net", "bb87881e7a2166", "dc7e8234") or die("No se pudo conectar: " . mysqli_error());
-        echo 'PHP está funcionado2!!!';
-        $conexion = mysqli_select_db($link, 'ad_643556e1444d091') or die('No se pudo seleccionar la base de datos');
+        $user = "tdouavjf";
+        $password = "GcuGUoBz0JhG3mmVtYkcbNjOGjtPvQh6";
+        $dbname = "tdouavjf";
+        $port = "5432";
+        $host = "echo.db.elephantsql.com";
+        $cadenaConexion = "host=$host port=$port dbname=$dbname user=$user password=$password";
+        $conexion = pg_connect($cadenaConexion) or die("Error en la Conexión: ".pg_last_error());
+        echo "<h3>Conexion Exitosa PHP - PostgreSQL</h3><hr><br>";
+        $query = "select username from usuario";
+        $resultado = pg_query($conexion, $query) or die("Error en la Consulta SQL");
+        $numReg = pg_num_rows($resultado);
+        if($numReg>0){
+        while ($fila=pg_fetch_array($resultado)) {
+        echo "<p>".$fila['username']."</p>";
+        }
+        }else{
+                echo "No hay Registros";
+        }
+     
         $nombre = "";
         echo "PHP está funcionado3!!!";
         echo "PHP está funcionado4!!!";
         $user = $_POST['usuario'];
         $pass = $_POST['pass'];
         echo "PHP está funcionado5!!!";
-        $result = mysqli_query($link, 'SELECT username,pass FROM usuario where username=' . '"' . $user . '" && pass=' . '"' . $pass . '"');
         echo "PHP está funcionado6!!!";
-        $rows = mysqli_num_rows($result);
         echo "PHP está funcionado7!!!";
-        if ($rows == 1) {
+        if ($numReg == 1) {
             while ($res = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 $nombre = $res['username'];
             }
