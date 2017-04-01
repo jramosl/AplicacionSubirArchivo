@@ -12,6 +12,12 @@
     <body>
         <?php
         echo 'PHP está funcionado1!!!';
+        $conn = new mysqli('us-cdbr-iron-east-03.cleardb.net','bb87881e7a2166','dc7e8234');
+        if ($conn->connect_error){
+        echo "Something wrong"
+        } else {
+        echo "Hello world"
+        }
         $user = "tdouavjf";
         $password = "GcuGUoBz0JhG3mmVtYkcbNjOGjtPvQh6";
         $dbname = "tdouavjf";
