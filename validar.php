@@ -12,7 +12,7 @@
     <body>
         <?php
         echo "PHP está funcionado!!!";
-        require_once './conexionBD.php';
+        require_once 'conexionBD.php';
         $nombre = "";
         $obj = new conexionBD();
         $enlace = $obj->crearConexion();
