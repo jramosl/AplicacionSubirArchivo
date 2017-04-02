@@ -28,7 +28,7 @@
         } else {
             ?>
             <div class="alert alert-danger">
-                <strong>No se pudo iniciar sesión. </strong> Credenciales inválidas. <a href="inicio.html" class="alert-link">Iniciar sesión</a>.
+                <strong>No se pudo iniciar sesi&oacute;n. </strong> Credenciales inv&aacute;lidas. <a href="inicio.html" class="alert-link">Iniciar sesi&oacute;n</a>.
             </div>
         </body>
         <?php
