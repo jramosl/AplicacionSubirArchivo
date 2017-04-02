@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <?php
-require_once './conexionBD.php';
-$obj = new conexionBD();
-$enlace = $obj->crearConexion();
+$link = mysqli_connect('us-cdbr-iron-east-03.cleardb.net', 'bb87881e7a2166', 'dc7e8234') or die('No se pudo conectar: ' . mysqli_error());
+$conexion = mysqli_select_db($link, "ad_643556e1444d091") or die('No se pudo seleccionar la base de datos');
 ?>
 <html>
     <head>
@@ -19,7 +18,7 @@ $enlace = $obj->crearConexion();
         $pass1 = $_POST['passNuevo'];
         $pass2 = $_POST['passNuevo2'];
         $mensaje = "";
-        $result = mysqli_query($enlace, 'SELECT * FROM usuario where username=' . '"' . $user . '"');
+        $result = mysqli_query($link, 'SELECT * FROM usuario where username=' . '"' . $user . '"');
         $rows = mysqli_num_rows($result);
         if ($rows == 0) {
             if ($pass1 == $pass2 && $pass1 != "" && $user != "" && $pass2 != "")
