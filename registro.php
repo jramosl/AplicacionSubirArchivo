@@ -34,7 +34,7 @@ $conexion = mysqli_select_db($link, "ad_643556e1444d091") or die('No se pudo sel
             ?>
             <div class="container">
                 <div class="alert alert-success">
-                    <strong>El registro ha sido exitoso!</strong> Inicia sesión para entrar. <a href="inicio.html" class="alert-link">Iniciar sesión</a>.
+                    <strong>El registro ha sido exitoso!</strong> Inicia sesi&oacute;n para entrar. <a href="inicio.html" class="alert-link">Iniciar sesi&oacute;n</a>.
                 </div>
                 <?PHP
             }
@@ -43,7 +43,7 @@ $conexion = mysqli_select_db($link, "ad_643556e1444d091") or die('No se pudo sel
             if (!$estado) {
                 ?>
                 <div class="alert alert-danger">
-                    <strong>El registro ha fallado!</strong> Regístrate para ingresar <a href="inicio.html" class="alert-link">Registrarse</a>.
+                    <strong>El registro ha fallado!</strong> Reg&iacute;strate para ingresar <a href="inicio.html" class="alert-link">Registrarse</a>.
                 </div>
                 <?PHP
             }
