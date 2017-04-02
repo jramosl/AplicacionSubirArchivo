@@ -22,7 +22,7 @@ $conexion = mysqli_select_db($link, "ad_643556e1444d091") or die('No se pudo sel
         $rows = mysqli_num_rows($result);
         if ($rows == 0) {
             if ($pass1 == $pass2 && $pass1 != "" && $user != "" && $pass2 != "")
-                $estado = mysqli_query($enlace, "INSERT INTO usuario(username,pass) VALUES('$user','$pass1')");
+                $estado = mysqli_query($link, "INSERT INTO usuario(username,pass) VALUES('$user','$pass1')");
         } else {
             if ($pass1 != $pass2)
                 $mensaje+="Las claves no son iguales" . "<br>";
