@@ -1,6 +1,3 @@
-<?php
-ini_set("extension","php_mysqli.dll");
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,13 +11,11 @@ ini_set("extension","php_mysqli.dll");
     </head>
     <body>
         <?php
-        
-        require_once './conexionBD.php';
         $nombre = "";
-        $obj = new conexionBD();
-        $enlace = $obj->crearConexion();
         $user = $_POST['usuario'];
         $pass = $_POST['pass'];
+        $link = mysqli_connect('us-cdbr-iron-east-03.cleardb.net', 'bb87881e7a2166', 'dc7e8234') or die('No se pudo conectar: ' . mysqli_error());
+        $conexion = mysqli_select_db($link, "ad_643556e1444d091") or die('No se pudo seleccionar la base de datos');
         $result = mysqli_query($enlace, 'SELECT username,pass FROM usuario where username=' . '"' . $user . '" && pass=' . '"' . $pass . '"');
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
