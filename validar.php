@@ -16,7 +16,7 @@
         $pass = $_POST['pass'];
         $link = mysqli_connect('us-cdbr-iron-east-03.cleardb.net', 'bb87881e7a2166', 'dc7e8234') or die('No se pudo conectar: ' . mysqli_error());
         $conexion = mysqli_select_db($link, "ad_643556e1444d091") or die('No se pudo seleccionar la base de datos');
-        $result = mysqli_query($enlace, 'SELECT username,pass FROM usuario where username=' . '"' . $user . '" && pass=' . '"' . $pass . '"');
+        $result = mysqli_query($link, 'SELECT username,pass FROM usuario where username=' . '"' . $user . '" && pass=' . '"' . $pass . '"');
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
             while ($res = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
